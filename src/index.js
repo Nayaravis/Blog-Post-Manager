@@ -10,20 +10,48 @@ function addNewPostListener() {
         event.preventDefault();
         const postTitle = composeForm.title.value;
         const postAuthor = composeForm.author.value;
+        const content = composeForm.content.value
         const timestamp = new Date();
         if (postTitle.trim() != ""
             && postAuthor.trim() != ""
         ) {
-            postListContainer.innerHTML = `
-                <li onclick=""class="text-left w-full p-2 border border-black hover:bg-black hover:text-white transition-colors cursor-pointer">
-                <h2 class="block text-md font-semibold">${postTitle}</h2>
-                <p className="text-xs text-neutral-700">${timestamp.getDate()}</p>
-                </li>
-                ` + postListContainer.innerHTML
-            titleField.value = ""
-            authorField.value = ""
-            contentField.value = ""
-            postListContainer.scrollTo({ top: 0, behavior: 'smooth' });
+            const postData = {
+                title: postTitle,
+                author: postAuthor,
+                content: content,
+                timestamp: timestamp.toISOString(),
+            };
+            const requestOptions = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify(postData)
+            };
+            fetch("http://localhost:3000/posts", requestOptions)
+                .then(res => res.json())
+                .then(post => {
+                    const date = new Date(timestamp);
+                    const readable = date.toLocaleString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      hour12: false,
+                    });
+                    postListContainer.innerHTML = `
+                        <li onclick="openPostDetails(${post.id})" id="${post.id}"class="text-left w-full p-2 border border-black hover:bg-black hover:text-white transition-colors cursor-pointer">
+                        <h2 class="block text-md font-semibold">${post.title}</h2>
+                        <p className="text-xs text-neutral-700">${readable}</p>
+                        </li>
+                        ` + postListContainer.innerHTML
+                    titleField.value = ""
+                    authorField.value = ""
+                    contentField.value = ""
+                    postListContainer.scrollTo({ top: 0, behavior: 'smooth' });
+                })
         }
     });
 }
@@ -33,7 +61,7 @@ function openPostDetails(postId) {
         .then(res => res.json())
         .then(post => {
             const postCard = `
-            <div class="border-2 border-black bg-white max-w-3xl h-full rounded-2xl overflow-y-scroll">
+            <div class="border-2 border-black bg-white w-3xl h-full rounded-2xl overflow-y-scroll">
               <div class="p-6">
                 <h2 class="text-2xl font-bold mb-2">${post.title}</h2>
                 <p class="text-sm text-neutral-700 mb-1">by ${post.author}</p>
@@ -64,10 +92,19 @@ function displayPosts() {
         .then(res => res.json())
         .then(posts => {
             posts.forEach(post => {
+                const date = new Date(post.timestamp);
+                const readable = date.toLocaleString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: false,
+                });
                 const listItem = `
-                <li onclick="openPostDetails(${post.id})" id="${post.id}"class="text-left w-full p-2 border border-black hover:bg-black hover:text-white transition-colors cursor-pointer">
+                <li onclick="openPostDetails(${post.id})" id="${post.id}" class="text-left w-full p-2 border border-black hover:bg-black hover:text-white transition-colors cursor-pointer">
                 <h2 class="block text-md font-semibold">${post.title}</h2>
-                <p className="text-xs text-neutral-700">${post.timestamp}</p>
+                <p className="text-xs text-neutral-700">${readable}</p>
                 </li>
                 `
                 postListContainer.innerHTML += listItem
@@ -77,6 +114,7 @@ function displayPosts() {
 
 function main() {
     displayPosts();
+    openPostDetails(1)
     addNewPostListener();
 };
 
