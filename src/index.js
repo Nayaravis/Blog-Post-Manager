@@ -6,14 +6,14 @@ function openPostDetails(postId) {
         .then(res => res.json())
         .then(post => {
             const postCard = `
-            <div class="border-2 border-black bg-white max-w-2xl h-fit rounded-2xl">
+            <div class="border-2 border-black bg-white max-w-3xl h-full rounded-2xl overflow-y-scroll">
               <div class="p-6">
                 <h2 class="text-2xl font-bold mb-2">${post.title}</h2>
                 <p class="text-sm text-neutral-700 mb-1">by ${post.author}</p>
                 <p class="text-xs text-neutral-500 mb-6">${post.timestamp}</p>
-                <p class="text-base text-neutral-900 leading-relaxed whitespace-pre-line">
-                  ${post.content}
-                </p>
+                ${post.content.split("\n").map(paragraph => `<p class="text-base text-neutral-900 leading-relaxed whitespace-pre-line">
+                  ${paragraph}
+                </p>`).join("")}
               </div>
             </div>
             `;
