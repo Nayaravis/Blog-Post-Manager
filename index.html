@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 </head>
-<body class="bg-neutral-100 font-mono">
+<body class="bg-neutral-100 font-mono min-w-6xl">
     <div class="w-full absolute bg-white h-16 border-b-2 border-black flex items-center px-3.5">
         <nav class="w-full flex justify-between items-center">
             <span class="text-2xl font-semibold">Beyond Bits & Atoms</span>
@@ -15,11 +15,33 @@
         </nav>
     </div>
     <div class="pt-16 h-screen flex">
-        <div class="w-lg h-full border-r">
-            <ul id="post-list" class="p-3.5 flex flex-col gap-3.5 list-none h-full overflow-y-scroll"></ul>
+        <div class="w-lg h-full border-r flex flex-col">
+            <ul id="post-list" class="p-3.5 flex flex-col gap-3.5 list-none h-5/6 overflow-y-scroll border-b"></ul>
+            <div class="overflow-y-scroll">
+                <form class="max-w-xl mx-auto p-3.5 bg-white font-mono space-y-6" id="new-post-form">
+                    <h2 class="text-2xl font-bold border-b border-black pb-2 uppercase">Add New Post</h2>
+                    <div class="flex flex-col space-y-1">
+                        <label for="title" class="text-sm uppercase tracking-wide">Title</label>
+                        <input id="title" name="title" type="text" required class="border border-black p-2 bg-neutral-100 text-black w-full focus:outline-none focus:bg-white"/>
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <label for="author" class="text-sm uppercase tracking-wide">Author</label>
+                        <input id="author" name="author" type="text" required class="border border-black p-2 bg-neutral-100 text-black w-full focus:outline-none focus:bg-white"/>
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <label for="content" class="text-sm uppercase tracking-wide">Content</label>
+                        <textarea id="content" name="content" rows="6" required class="border border-black p-2 bg-neutral-100 text-black w-full resize-y focus:outline-none focus:bg-white"></textarea>
+                    </div>
+                    <button type="submit" class="w-full border border-black bg-black text-white py-2 hover:bg-neutral-900 transition-colors">
+                    Submit Post
+                  </button>
+                </form>
+            </div>
         </div>
-        <div id="post-details" class="w-full h-full flex justify-center p-3.5">
+        <div class="w-full h-full flex flex-col">
+            <div id="post-details" class="w-full h-full flex justify-center p-3.5">
             
+            </div>
         </div>
     </div>
     <script src="src/index.js"></script>
