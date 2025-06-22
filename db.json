@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "title": "The Future of AI in Everyday Life",
+      "author": "Jane Doe",
+      "image_url": "https://images.unsplash.com/photo-1680783954745-3249be59e527?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "content": "Artificial intelligence is rapidly integrating into our daily routines, from smart home devices to personalized recommendations. This post explores the exciting advancements and potential impacts of AI on society.",
+      "timestamp": "2024-06-20T10:30:00Z"
+    },
+    {
+      "title": "Exploring the Amazon Rainforest: A Photographer's Journey",
+      "author": "John Smith",
+      "image_url": "https://images.unsplash.com/photo-1591081658714-f576fb7ea3ed?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "content": "Join me on a visual expedition through the lush biodiversity of the Amazon. I'll share tips for wildlife photography and recount unforgettable encounters with nature.",
+      "timestamp": "2024-06-18T14:00:00Z"
+    },
+    {
+      "title": "Mastering Sourdough Baking: A Beginner's Guide",
+      "author": "Emily White",
+      "image_url": "https://images.unsplash.com/photo-1597604391235-a7429b4b350c?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "content": "Sourdough baking can seem daunting, but with this step-by-step guide, you'll be creating delicious, crusty loaves in no time. We cover everything from starter maintenance to proofing techniques.",
+      "timestamp": "2024-06-15T09:45:00Z"
+    },
+    {
+      "title": "The Benefits of Mindfulness Meditation for Stress Reduction",
+      "author": "David Green",
+      "image_url": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=799&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "content": "Discover how incorporating mindfulness meditation into your daily routine can significantly reduce stress and improve overall well-being. This post outlines simple practices to get you started.",
+      "timestamp": "2024-06-12T11:15:00Z"
+    }
+  ]
+}
