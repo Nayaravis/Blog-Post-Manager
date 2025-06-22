@@ -1,32 +1,36 @@
 {
   "posts": [
     {
-      "title": "The Future of AI in Everyday Life",
-      "author": "Jane Doe",
-      "image_url": "https://images.unsplash.com/photo-1680783954745-3249be59e527?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "content": "Artificial intelligence is rapidly integrating into our daily routines, from smart home devices to personalized recommendations. This post explores the exciting advancements and potential impacts of AI on society.",
-      "timestamp": "2024-06-20T10:30:00Z"
+      "id": 1,
+      "title": "Quantum Supremacy: Beyond the Hype to Real-World Applications",
+      "author": "Dr. Alice Quantum",
+      "image_url": "https://images.unsplash.com/photo-1717501217963-67e30c290e6f?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "content": "Quantum computing is rapidly moving from theoretical concepts to practical applications. This post delves into the latest breakthroughs in quantum error correction, quantum machine learning, and how these advancements are poised to revolutionize fields like drug discovery and financial modeling. We explore the challenges and the exciting future of quantum technologies.",
+      "timestamp": "2025-06-21T09:00:00Z"
     },
     {
-      "title": "Exploring the Amazon Rainforest: A Photographer's Journey",
-      "author": "John Smith",
-      "image_url": "https://images.unsplash.com/photo-1591081658714-f576fb7ea3ed?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "content": "Join me on a visual expedition through the lush biodiversity of the Amazon. I'll share tips for wildlife photography and recount unforgettable encounters with nature.",
-      "timestamp": "2024-06-18T14:00:00Z"
+      "id": 2,
+      "title": "Spatial Computing: Blending Realities for Industrial Revolution 4.0",
+      "author": "Mark AR/VR",
+      "image_url": "https://images.unsplash.com/photo-1696517170961-661e9dca962e?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "content": "Spatial computing, powered by advancements in AR, VR, and digital twins, is reshaping how industries operate. From immersive training simulations for surgeons and pilots to real-time optimization in manufacturing and logistics, this technology creates new dimensions of interaction between the physical and digital worlds. We examine current use cases and future implications.",
+      "timestamp": "2025-06-19T14:30:00Z"
     },
     {
-      "title": "Mastering Sourdough Baking: A Beginner's Guide",
-      "author": "Emily White",
-      "image_url": "https://images.unsplash.com/photo-1597604391235-a7429b4b350c?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "content": "Sourdough baking can seem daunting, but with this step-by-step guide, you'll be creating delicious, crusty loaves in no time. We cover everything from starter maintenance to proofing techniques.",
-      "timestamp": "2024-06-15T09:45:00Z"
+      "id": 3,
+      "title": "Beyond Earth: The Next Frontier of Space Exploration Technology",
+      "author": "Captain Stellar",
+      "image_url": "https://media.gettyimages.com/id/2158701066/photo/a-spacex-falcon-heavy-rocket-carrying-the-national-oceanic-and-atmospheric-administrations.jpg?s=612x612&w=0&k=20&c=be_bkWnhCnP8sze2Ket2IV564dxn_I0owobe79HuZV4=",
+      "content": "Space exploration is accelerating, driven by innovations in reusable rockets, advanced propulsion systems, and in-situ resource utilization. This article explores cutting-edge technologies enabling longer missions, lunar and Martian habitats, and the increasing role of AI and robotics in autonomous space operations. What will humanity's presence in space look like in the next decade?",
+      "timestamp": "2025-06-17T11:00:00Z"
     },
     {
-      "title": "The Benefits of Mindfulness Meditation for Stress Reduction",
-      "author": "David Green",
-      "image_url": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=799&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "content": "Discover how incorporating mindfulness meditation into your daily routine can significantly reduce stress and improve overall well-being. This post outlines simple practices to get you started.",
-      "timestamp": "2024-06-12T11:15:00Z"
+      "id": 4,
+      "title": "Fintech's Evolution: AI, Embedded Finance, and the Future of Money",
+      "author": "Finley Tech",
+      "image_url": "https://images.unsplash.com/photo-1587906697341-bfbde76785c7?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "content": "The fintech landscape is undergoing a radical transformation. This post examines key trends such as the pervasive integration of AI for personalized financial advice and fraud detection, the rise of embedded finance, and the increasing importance of green fintech. We also touch upon the evolving regulatory environment and the impact of central bank digital currencies (CBDCs) on global finance.",
+      "timestamp": "2025-06-15T16:45:00Z"
     }
   ]
 }
