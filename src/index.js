@@ -1,5 +1,32 @@
 const postListContainer = document.getElementById("post-list");
 const postDetailsContainer = document.getElementById("post-details");
+const composeForm = document.querySelector("#new-post-form");
+const titleField = document.getElementById("title");
+const authorField = document.getElementById("author");
+const contentField = document.getElementById("content")
+
+function addNewPostListener() {
+    composeForm.addEventListener("submit", event => {
+        event.preventDefault();
+        const postTitle = composeForm.title.value;
+        const postAuthor = composeForm.author.value;
+        const timestamp = new Date();
+        if (postTitle.trim() != ""
+            && postAuthor.trim() != ""
+        ) {
+            postListContainer.innerHTML = `
+                <li onclick=""class="text-left w-full p-2 border border-black hover:bg-black hover:text-white transition-colors cursor-pointer">
+                <h2 class="block text-md font-semibold">${postTitle}</h2>
+                <p className="text-xs text-neutral-700">${timestamp.getDate()}</p>
+                </li>
+                ` + postListContainer.innerHTML
+            titleField.value = ""
+            authorField.value = ""
+            contentField.value = ""
+            postListContainer.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+}
 
 function openPostDetails(postId) {
     fetch(`http://localhost:3000/posts/${postId}`)
@@ -37,15 +64,20 @@ function displayPosts() {
         .then(res => res.json())
         .then(posts => {
             posts.forEach(post => {
-                const postCard = `
+                const listItem = `
                 <li onclick="openPostDetails(${post.id})" id="${post.id}"class="text-left w-full p-2 border border-black hover:bg-black hover:text-white transition-colors cursor-pointer">
                 <h2 class="block text-md font-semibold">${post.title}</h2>
                 <p className="text-xs text-neutral-700">${post.timestamp}</p>
                 </li>
                 `
-                postListContainer.innerHTML += postCard
+                postListContainer.innerHTML += listItem
             });
         });
-}
+};
 
-displayPosts();
+function main() {
+    displayPosts();
+    addNewPostListener();
+};
+
+document.addEventListener("DOMContentLoaded", main);
